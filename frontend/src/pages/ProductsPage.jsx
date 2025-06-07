@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../redux/actions/productActions';
-import ProductFormModal from '../components/ProductFormModal';
+import ProductFormModal from '../Components/ProductFormModal';
 
 const ProductsPage = () => {
   const dispatch = useDispatch();
