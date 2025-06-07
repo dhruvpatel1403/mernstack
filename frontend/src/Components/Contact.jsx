@@ -5,13 +5,13 @@ function Contact() {
   return (
     <div
       style={{
-        background: '#f5f5f5', // Soft background
+        background: '#f5f5f5', 
         width: '100vw',
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        paddingTop: '56px', // Adjust for navbar
+        paddingTop: '56px', 
         boxSizing: 'border-box',
       }}
     >

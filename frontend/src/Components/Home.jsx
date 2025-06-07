@@ -6,7 +6,7 @@ function Home() {
   return (
     <div
       style={{
-        background: 'linear-gradient(to right, #6a11cb, #2575fc)', // Updated color combination
+        background: 'linear-gradient(to right, #6a11cb, #2575fc)', 
         color: 'white',
         width: '100vw',
         height: '100vh',
@@ -45,7 +45,7 @@ function Home() {
                 padding: '0.75rem 2rem',
                 fontSize: '1.1rem',
                 fontWeight: '500',
-                color: '#6a11cb', // Accent color for better harmony
+                color: '#6a11cb', 
               }}
             >
               Explore Products
