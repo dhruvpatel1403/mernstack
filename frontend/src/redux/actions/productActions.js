@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const API_URL = 'http://localhost:5000/api/products'; // ✅ Local MongoDB backend
+const API_URL = 'https://prodmanager-egeb.onrender.com/api/products'; // Change this to your Render URL when deploying
 
 export const createProduct = (product) => async (dispatch) => {
   dispatch({ type: 'CREATE_PRODUCT_REQUEST' });
