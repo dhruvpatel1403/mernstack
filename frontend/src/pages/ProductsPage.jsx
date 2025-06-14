@@ -21,7 +21,7 @@ const ProductsPage = () => {
       {loading ? <p>Loading...</p> : (
         <ul>
           {products.map(product => (
-            <li key={product.id}>{product.title} - ${product.price}</li>
+            <li key={product._id}>{product.title} - ${product.price}</li>
           ))}
         </ul>
       )}
