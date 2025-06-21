@@ -1,8 +1,7 @@
-
 import React from 'react';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import './RegistrationForm.css'; 
+import './RegistrationForm.css';
 
 const RegistrationForm = () => {
   const formik = useFormik({
@@ -28,27 +27,37 @@ const RegistrationForm = () => {
     }),
     onSubmit: async (values, { resetForm }) => {
       try {
-        const response = await fetch('https://prodmanager-egeb.onrender.com/api/register', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            fullname: values.fullname,
-            email: values.email,
-            phone: values.phone,
-            password: values.password,
-          }),
-        });
+        const response = await fetch(
+          `${process.env.REACT_APP_API || 'https://prodmanager-egeb.onrender.com/api'}/auth/register`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              fullname: values.fullname,
+              email: values.email,
+              phone: values.phone,
+              password: values.password,
+            }),
+          }
+        );
 
-        const data = await response.json();
+        const text = await response.text(); 
 
-        if (!response.ok) {
-          throw new Error(data.error || 'Registration failed');
+        try {
+          const data = JSON.parse(text);
+
+          if (!response.ok) {
+            throw new Error(data.message || 'Registration failed');
+          }
+
+          alert('✅ Registration successful!');
+          resetForm();
+        } catch (parseError) {
+          console.error('Not JSON:', text);
+          throw new Error('Unexpected response from server');
         }
-
-        alert('✅ Registration successful!');
-        resetForm();
       } catch (error) {
         alert('❌ Error: ' + error.message);
       }
