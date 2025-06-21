@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* exact height of screen */
+  height: 100vh; 
   background: linear-gradient(to bottom right, #cbd5e0, #e9d8fd);
   padding: 0 20px;
 }
@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-/* ↓ LIMIT logo size to prevent pushing content */
+
 .registration-header .logo {
   font-size: 16px;
   font-weight: bold;
@@ -32,7 +32,7 @@
   margin: 5px 0 15px;
 }
 
-/* Form styling */
+
 .form-title {
   font-size: 20px;
   margin-bottom: 20px;

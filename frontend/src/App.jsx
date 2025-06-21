@@ -7,6 +7,7 @@ import Products from './Components/Products.jsx';
 import Contact from './Components/Contact.jsx';
 import RegistrationForm from './pages/RegistrationForm.jsx';
 
+import LoginForm from './pages/LoginForm.jsx'; // 👈 Add this import
 
 import './App.css';
 
@@ -22,6 +23,8 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/register" element={<RegistrationForm />} />
+          <Route path="/login" element={<LoginForm />} />
+
         </Routes>
       </div>
     </Router>

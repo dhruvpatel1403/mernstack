@@ -16,7 +16,7 @@ const EditProductModal = ({ show, handleClose, product }) => {
   });
 
   const onSubmit = (values, { setSubmitting }) => {
-    dispatch(updateProduct(product.id, values));
+    dispatch(updateProduct(product._id, values));
     setSubmitting(false);
     handleClose();
   };
