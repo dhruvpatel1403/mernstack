@@ -52,14 +52,14 @@ const RegistrationForm = () => {
             throw new Error(data.message || 'Registration failed');
           }
 
-          alert('✅ Registration successful!');
+          alert('Registration successful!');
           resetForm();
         } catch (parseError) {
           console.error('Not JSON:', text);
           throw new Error('Unexpected response from server');
         }
       } catch (error) {
-        alert('❌ Error: ' + error.message);
+        alert(' Error: ' + error.message);
       }
     },
   });
